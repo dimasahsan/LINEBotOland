@@ -42,7 +42,7 @@ public class LineBotController
         System.out.println("lChannelSecret.getBytes() :" + lChannelSecret.getBytes());
         System.out.println("lChannelSecret :" + lChannelSecret);
         final boolean valid=new LineSignatureValidator(lChannelSecret.getBytes()).validateSignature(aPayload.getBytes(), aXLineSignature);
-        System.out.println("The signature is: " + (valid ? "valid" : "tidak valid"));
+        System.out.println("The Signature is: " + (valid ? "valid" : "tidak valid"));
         if(aPayload!=null && aPayload.length() > 0)
         {
             System.out.println("Payload: " + aPayload);
