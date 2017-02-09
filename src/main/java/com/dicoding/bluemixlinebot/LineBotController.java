@@ -37,10 +37,10 @@ public class LineBotController
         final String text=String.format("The Signature is: %s",
                 (aXLineSignature!=null && aXLineSignature.length() > 0) ? aXLineSignature : "N/A");
         System.out.println(text);
-        System.out.println("aXLineSignature " + aXLineSignature);
-        System.out.println("aPayload.getBytes() " + aPayload.getBytes());
-        System.out.println("lChannelSecret.getBytes() " + lChannelSecret.getBytes());
-        System.out.println("lChannelSecret " + lChannelSecret);
+        System.out.println("aXLineSignature :" + aXLineSignature);
+        System.out.println("aPayload.getBytes() :" + aPayload.getBytes());
+        System.out.println("lChannelSecret.getBytes() :" + lChannelSecret.getBytes());
+        System.out.println("lChannelSecret :" + lChannelSecret);
         final boolean valid=new LineSignatureValidator(lChannelSecret.getBytes()).validateSignature(aPayload.getBytes(), aXLineSignature);
         System.out.println("The signature is: " + (valid ? "valid" : "tidak valid"));
         if(aPayload!=null && aPayload.length() > 0)
