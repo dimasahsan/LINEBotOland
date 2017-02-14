@@ -52,5 +52,7 @@ dependencies
 	compile('com.google.code.gson:gson:2.7')
 	compile('com.linecorp.bot:line-bot-api-client:1.4.0')
 	compile('com.linecorp.bot:line-bot-model:1.4.0')
+	testCompile 'com.squareup.okhttp3:mockwebserver'
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat:1.4.3.RELEASE')
+	testCompile("junit:junit")
 }
